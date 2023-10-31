@@ -4,7 +4,7 @@ from django.db import models
 
 class Contato(models.Model):
 
-# opços de camopo estado civil, o primeiro da tupla vai no banco
+# opções de campo estado civil, o primeiro da tupla vai no banco
     ESTADO_CIVIS = [
         ('S','Solteiro'),
         ('C','Casado'),
@@ -15,7 +15,7 @@ class Contato(models.Model):
 
 
 
-    nome = models.CharField(max_length=100)
+    nome = models.CharField(max_length=200)
     apelido = models.CharField(max_length=30)
     email = models.EmailField(max_length=100)
     data_nascimento = models.DateField(verbose_name= "Data de nascimento")
