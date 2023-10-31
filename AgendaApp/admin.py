@@ -6,7 +6,7 @@ from AgendaApp.models import Contato
 
 class ContatoAdmin(admin.ModelAdmin):
     
-    list_display = ['id','nome','apelido','data_nascimento']
+    list_display = ['id','nome','apelido','data_nascimento',"estado_civil"]
     list_filter = ['data_nascimento','cidade', 'estado']
     search_fields= ['nome', 'apelido']
 

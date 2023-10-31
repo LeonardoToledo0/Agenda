@@ -3,6 +3,18 @@ from django.db import models
 # Create your models here.
 
 class Contato(models.Model):
+
+# opços de camopo estado civil, o primeiro da tupla vai no banco
+    ESTADO_CIVIS = [
+        ('S','Solteiro'),
+        ('C','Casado'),
+        ('D','Divorciado'),
+        ('V','Viúvo')]
+
+
+
+
+
     nome = models.CharField(max_length=100)
     apelido = models.CharField(max_length=30)
     email = models.EmailField(max_length=100)
@@ -14,6 +26,7 @@ class Contato(models.Model):
     bairro = models.CharField(max_length=100)
     cidade = models.CharField(max_length=100)
     estado = models.CharField(max_length=50)
+    estado_civil = models.CharField(max_length=1, choices=ESTADO_CIVIS, null=True)
 
 
     def __str__(self):
