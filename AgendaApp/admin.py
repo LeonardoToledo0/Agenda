@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from AgendaApp.models import Contato
+from AgendaApp.models import Contato,Cidade
 
 class ContatoAdmin(admin.ModelAdmin):
     
@@ -17,3 +17,4 @@ class ContatoAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Contato,ContatoAdmin)
+admin.site.register(Cidade)
