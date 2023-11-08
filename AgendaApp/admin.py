@@ -16,7 +16,7 @@ class ContatoAdmin(admin.ModelAdmin):
     list_filter = ['id','nome','data_nascimento','cidade', 'estado',]
     search_fields= ['id','nome', 'apelido']
     inlines = [Telefones]
-    filter_horizontal =['interesses']
+    filter_horizontal =['interesse']
 
 class TelefoneAdmin(admin.ModelAdmin):
     list_display = ['ddd','numero','tipo','IsWatsApp']

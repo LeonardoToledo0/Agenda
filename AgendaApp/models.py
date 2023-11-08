@@ -49,7 +49,7 @@ class Contato(models.Model):
     cidade = models.ForeignKey(Cidade, on_delete=models.CASCADE)
     estado = models.CharField(max_length=2, choices=UFS)
     estado_civil = models.CharField(max_length=1, choices=ESTADO_CIVIS, null=True)
-    interesses = models.ManyToManyField(Interesse)
+    interesse = models.ManyToManyField(Interesse)
 
 
     def __str__(self):
@@ -69,7 +69,7 @@ class Telefone(models.Model):
         ('CEL','Celular')
     ]
     contato = models.ForeignKey(Contato, on_delete=models.CASCADE)
-    ddd = models.IntegerField(max_length=2, verbose_name='DDD')
+    ddd = models.IntegerField( verbose_name='DDD')
     numero = models.CharField(max_length=10)
     tipo = models.CharField(max_length=3, choices= TIPOS_TELEFONE) 
     IsWatsApp = models.BooleanField(verbose_name='Watsapp')
